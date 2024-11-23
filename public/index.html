@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-adsense-account" content="ca-pub-2149605878776893">
     <title>The News</title>
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -10,15 +11,21 @@
     <div class="container">
         <h1>The News</h1>
         <input type="text" id="search-input" placeholder="Cari berita..." />
-        
-        <div class="main-content">
-            <div id="news-container" class="main-article"></div>
-            <div class="sidebar">
-                <h2>Berita Terpopuler</h2>
-                <div id="popular-news-container"></div>
-            </div>
+
+        <!-- Kode Iklan Google AdSense -->
+        <div class="adsense-ad">
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-2149605878776893"
+                 data-ad-slot="XXXXXXXXXX" <!-- Ganti dengan slot iklan Anda -->
+                 data-ad-format="auto"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
         </div>
 
+        <div id="news-container" class="main-article"></div>
         <div id="loading" class="loading">Memuat berita...</div>
         <div id="error-message" class="error-message"></div>
 
