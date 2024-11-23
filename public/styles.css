@@ -1,0 +1,171 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f4ff; /* Warna latar belakang biru muda */
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px; /* Lebar maksimum kontainer */
+    margin: auto;
+    background: #ffffff; /* Warna putih untuk kontainer */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border: 2px solid #3b82f6; /* Garis biru */
+}
+
+h1 {
+    text-align: center;
+    color: #3b82f6; /* Warna biru untuk judul */
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+h2 {
+    margin-top: 30px;
+    color: #1e3a8a; /* Warna biru gelap untuk subjudul */
+}
+
+#search-input {
+    width: calc(100% - 22px); /* Mengurangi lebar untuk padding dan border */
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 2px solid #3b82f6; /* Garis biru */
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s; /* Transisi halus untuk border */
+}
+
+#search-input:focus {
+    border-color: #1e3a8a; /* Warna biru gelap saat fokus */
+    outline: none; /* Menghilangkan outline default */
+}
+
+.main-content {
+    display: flex; /* Mengatur tata letak menjadi flex */
+}
+
+.main-article {
+    flex: 3; /* Mengambil 3 bagian dari 4 */
+    margin-right: 20px; /* Jarak antara artikel utama dan sidebar */
+}
+
+.sidebar {
+    flex: 1; /* Mengambil 1 bagian dari 4 */
+    background-color: #f0f9ff; /* Latar belakang sidebar */
+    padding: 15px;
+    border-radius: 8px;
+    border: 2px solid #3b82f6; /* Garis biru untuk sidebar */
+}
+
+.article {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 2px solid #3b82f6; /* Garis biru untuk artikel */
+    border-radius: 8px;
+    background-color: #f0f9ff; /* Latar belakang biru muda untuk artikel */
+    transition: box-shadow 0.3s; /* Transisi halus untuk bayangan */
+}
+
+.article:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Bayangan saat hover */
+}
+
+.article h2 {
+    font-size: 1.5em;
+    color: #1e3a8a; /* Warna biru gelap untuk judul artikel */
+    margin: 0 0 10px; /* Jarak bawah */
+}
+
+.article p {
+    color: #374151; /* Warna abu-abu gelap untuk deskripsi */
+    margin: 0 0 10px; /* Jarak bawah */
+}
+
+.article img {
+    max-width: 100%; /* Membuat gambar responsif */
+    height: auto; /* Menjaga rasio aspek gambar */
+    border-radius: 5px; /* Menambahkan sudut melengkung pada gambar */
+    margin-bottom: 10px; /* Jarak antara gambar dan teks */
+}
+
+.article button {
+    background-color: #3b82f6; /* Warna biru untuk tombol */
+    color: white; /* Warna teks putih */
+    border: none; /* Menghilangkan border default */
+    padding: 10px 15px; /* Padding tombol */
+    border-radius: 5px; /* Sudut melengkung */
+    cursor: pointer; /* Menunjukkan bahwa tombol dapat diklik */
+    margin-right: 10px; /* Jarak antar tombol */
+    transition: background-color 0.3s; /* Transisi halus untuk warna latar belakang */
+}
+
+.article button:hover {
+    background-color: #1e3a8a; /* Warna biru gelap saat hover */
+}
+
+.article a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #3b82f6; /* Warna biru untuk tautan */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.article a:hover {
+    text-decoration: underline; /* Garis bawah saat hover */
+}
+
+.loading {
+    text-align: center;
+    color: #3b82f6; /* Warna biru untuk loading */
+    font-size: 1.2em;
+    display: none; /* Sembunyikan loading saat tidak digunakan */
+}
+
+.error-message {
+    color: red; /* Warna merah untuk pesan kesalahan */
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Gaya untuk berita rekomendasi dan terbaru */
+#recommended-news-container, #latest-news-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px; /* Jarak antar berita */
+}
+
+.recommended-article, .latest-article {
+    flex: 1 1 calc(33.333% - 10px); /* Tiga kolom */
+    border: 2px solid #3b82f6; /* Garis biru untuk artikel */
+    border-radius: 8px;
+    background-color: #f0f9ff; /* Latar belakang biru muda untuk artikel */
+    padding: 10px;
+    transition: box-shadow 0.3s; /* Transisi halus untuk bayangan */
+}
+
+.recommended-article:hover, .latest-article:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Bayangan saat hover */
+}
+
+/* Media Queries untuk Responsivitas */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2em; /* Ukuran font judul lebih kecil di perangkat kecil */
+    }
+
+    .article, .recommended-article, .latest-article {
+        flex: 1 1 100%; /* Satu kolom di perangkat kecil */
+        padding: 10px; /* Padding lebih kecil di perangkat kecil */
+    }
+
+    #search-input {
+        font-size: 14px; /* Ukuran font lebih kecil di perangkat kecil */
+    }
+
+    .article h2 {
+        font-size: 1.3em; /* Ukuran font judul lebih kecil di perangkat kecil */
+    }
+}

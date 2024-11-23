@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The News</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>The News</h1>
+        <input type="text" id="search-input" placeholder="Cari berita..." />
+        
+        <div class="main-content">
+            <div id="news-container" class="main-article"></div>
+            <div class="sidebar">
+                <h2>Berita Terpopuler</h2>
+                <div id="popular-news-container"></div>
+            </div>
+        </div>
+
+        <div id="loading" class="loading">Memuat berita...</div>
+        <div id="error-message" class="error-message"></div>
+
+        <h2>Berita Rekomendasi</h2>
+        <div id="recommended-news-container"></div>
+
+        <h2>Berita Terbaru</h2>
+        <div id="latest-news-container"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
